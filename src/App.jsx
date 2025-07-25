@@ -10,7 +10,7 @@ import metrologieImage from './assets/Metrologie_site_image.png';
 import modelisationImage from './assets/modelisation_numerique_image.jpg';
 import modelisationGif from './assets/gif_modelisation_numerique_luo.gif';
 import suiviImage from './assets/Drone_site_image.JPG';
-import diagnosticImage from './assets/diagnostic_integre.png';
+import diagnosticImage from './assets/';
 import diagnosticGif from './assets/LA-GRANDE-MOTTE_animation_shorelines.gif';
 import poissonBio from './assets/poisson_suivi_bio.JPG';
 
