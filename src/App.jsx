@@ -102,7 +102,7 @@ const services = [
     title: 'Suivi du Littoral / Drone Aérien',
     subtitle: '',
     image: suiviImage,
-    modalImages: [timeseriesMonthly, timeseriesSeasonal],
+    modalImages: [],
     icon: <Plane className="w-6 h-6" />,
     objectives: [
       'Suivre l\'évolution morphologique et écologique long-terme et/ou suite à des événements extrêmes de manière précise'
@@ -130,7 +130,7 @@ const services = [
     subtitle: '',
     image: diagnosticImage,
     gif: diagnosticGif,
-    modalImages: [],
+    modalImages: [timeseriesMonthly, timeseriesSeasonal],
     icon: <Search className="w-6 h-6" />,
     objectives: [
       'Compiler et analyser l\'ensemble des données disponibles hydrodynamiques et morpho-sédimentaires',
@@ -359,6 +359,25 @@ function App() {
                       />
                     ))}
                   </div>
+                </div>
+              )}
+
+              {/* Carte Leaflet avec KMZ pour Suivi du Littoral / Drone Aérien */}
+              {selectedService.id === 'suivi' && (
+                <div className="mb-8">
+                  <h3 className="text-xl font-semibold text-[var(--lineup-blue-dark)] mb-4">
+                    Orthophotographie (Google Earth KMZ)
+                  </h3>
+                  <React.Suspense fallback={<div>Chargement de la carte...</div>}>
+                    {typeof window !== 'undefined' && (
+                      (() => {
+                        const MapWithKmz = require('./components/MapWithKmz.jsx').default;
+                        return <MapWithKmz kmzUrl={
+                          'https://drive.google.com/uc?export=download&id=1fnSjKjp_6qSaNSSba-se7gxRA2mgyB93'
+                        } />;
+                      })()
+                    )}
+                  </React.Suspense>
                 </div>
               )}
 
