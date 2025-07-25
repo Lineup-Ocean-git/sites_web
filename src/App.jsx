@@ -374,7 +374,7 @@ function App() {
                     className="w-full max-w-2xl mx-auto rounded-lg shadow"
                   />
                 </div>
-              )
+              )}
 
               {/* Objectifs */}
               <div className="mb-8">
