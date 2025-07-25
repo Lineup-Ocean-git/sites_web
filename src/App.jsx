@@ -362,24 +362,19 @@ function App() {
                 </div>
               )}
 
-              {/* Carte Leaflet avec KMZ pour Suivi du Littoral / Drone Aérien */}
+              {/* Illustration orthophotographie Google Earth */}
               {selectedService.id === 'suivi' && (
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-[var(--lineup-blue-dark)] mb-4">
-                    Orthophotographie (Google Earth KMZ)
+                    Orthophotographie Google Earth (exemple)
                   </h3>
-                  <React.Suspense fallback={<div>Chargement de la carte...</div>}>
-                    {typeof window !== 'undefined' && (
-                      (() => {
-                        const MapWithKmz = require('./components/MapWithKmz.jsx').default;
-                        return <MapWithKmz kmzUrl={
-                          'https://drive.google.com/uc?export=download&id=1fnSjKjp_6qSaNSSba-se7gxRA2mgyB93'
-                        } />;
-                      })()
-                    )}
-                  </React.Suspense>
+                  <img
+                    src={require('./assets/otophoto_google_earth_screen.png')}
+                    alt="Orthophotographie Google Earth"
+                    className="w-full max-w-2xl mx-auto rounded-lg shadow"
+                  />
                 </div>
-              )}
+              )
 
               {/* Objectifs */}
               <div className="mb-8">
