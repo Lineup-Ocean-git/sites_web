@@ -362,20 +362,6 @@ function App() {
                 </div>
               )}
 
-              {/* Illustration orthophotographie Google Earth */}
-              {selectedService.id === 'suivi' && (
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-[var(--lineup-blue-dark)] mb-4">
-                    Orthophotographie Google Earth (exemple)
-                  </h3>
-                  <img
-                    src={require('./assets/otophoto_google_earth_screen.png')}
-                    alt="Orthophotographie Google Earth"
-                    className="w-full max-w-2xl mx-auto rounded-lg shadow"
-                  />
-                </div>
-              )}
-
               {/* Objectifs */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-[var(--lineup-blue-dark)] mb-4">
